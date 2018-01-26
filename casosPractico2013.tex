@@ -1,0 +1,86 @@
+\section{Caso práctico 2014}
+
+Desarrollo del software asociado a un cajero automático de un banco genérico, llamémosle \textbf{RABENSO}.
+
+\subsection{Detalla formalmente las siguientes funcionalidades, según el modelo empleado y la plantilla que empleasteis en las prácticas}
+\begin{itemize}
+    \item RF1: Cambiar PIN.
+    \item RF2: Consultar movimientos anteriores.
+    \item RF3: Retirar dinero.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{ID:} RF-0001
+\item \textbf{Título:} Cambiar pin.
+\item \textbf{Descripción:} el sistema deberá permitir cambiar el número de identificación personal del usuario utilizado para autorizar transacciones bancarias. Para ello utilizará una interfaz gráfica con un teclado numérico virtual en pantalla y confirmación de pin anterior. Si el número anterior no es correcto no se realizará ningún cambio de PIN.
+\item \textbf{Importancia:} Vital.
+\item \textbf{Estabilidad:} Alta.
+\item \textbf{Fuente:} Julián Flores González.
+\item \textbf{Criterio de validación}: el sistema cambia el número de identificación según las directrices anteriormente especificadas.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{ID:} RF-0002
+\item \textbf{Título:} Consultar movimientos.
+\item \textbf{Descripción:} el sistema deberá mostrar todos los movimientos del usuario en una lista desplegable por pantalla. Deberá permitir filtrar los movimientos por fecha (es decir, especificar un rango de fechas para visualizar).
+\item \textbf{Importancia:} Vital.
+\item \textbf{Estabilidad:} Alta.
+\item \textbf{Fuente:} Julián Flores González.
+\item \textbf{Criterio de validación}: El sistema muestra el conjunto de movimientos correctamente.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{ID:} RF-0003
+\item \textbf{Título:} Retirar dinero.
+\item \textbf{Descripción:} el sistema deberá retirar dinero de la cuenta bancaria del usuario. Para ello, se sustrae la cantidad especificada por el usuario en el teclado numérico virtual habilitado para tal propósito y se dispone un conjunto de billetes con dicha cantidad (minimizando el número de billetes emitidos).
+\item \textbf{Importancia:} Vital.
+\item \textbf{Estabilidad:} Alta.
+\item \textbf{Fuente:} Julián Flores González.
+\item \textbf{Criterio de validación}: el sistema realiza las operaciones correctamente (sustracción y emisión de billetes).
+\end{itemize}
+
+\subsection{Diseña el modelo de contexto, el DFD de primer nivel de forma que solo englobe las funcionalidades del apartado anterior}
+
+\subsection{Para el RF3, haz el DFD de nivel 2, con su correspondiente DFC asociado}
+
+\subsection{En el siguiente contexto, ¿cuál sería el modelo de ciclo de vida más apropiado? Motiva tu respuesta:}
+``El software va a ser desarrollado por una empresa que amplia experiencia en el desarrollo software bancario. Los requisitos están perfectamente definidos, pero el cliente quiere dotar al cajero de funcionalidades adicionales a las clásicas que le darían una ventaja competitiva sobre la competencia (que es muy activa), lo que exige resultados operativos a corto plazo.''
+%También podría ser espiral por lo mismo que en 2014
+El ciclo de vida elegido es ``Programación Extrema'' por los siguientes motivos:
+\begin{itemize}
+    \item La dinámica de historias de usuario permite al cliente priorizar las funcionalidades que quiera por lo que es útil si se requieren resultados a corto plazo.
+    \item La dinámica de historias de usuario proporciona entregables frecuentes lo que posibilita tener resultados operativos a corto plazo.
+    \item Al ser una metodología ágil, tiene una menor carga de modelos y documentación en comparación con las metodologías clásicas por lo que las entregas serán más rápidas.
+\end{itemize}
+
+\subsection{Establece un proceso de administración de riesgos, siguiendo la metodología de Sommerville, que contemple solo 3 riesgos, para el desarrollo del software en el siguiente contexto:}
+``El cajero tiene que admitir tarjetas de los siguientes tipos: RB, Rabocard, ENSO, TaboaBank. Tiene que tener un funcionamiento 24/7. Sabemos que en el mercado hay competidores que están trabajando en un producto similar''
+
+\subsubsection{Identificación y análisis de riesgos}
+%Aquí lo voy a realizar por separado
+\begin{itemize}
+\item \textbf{ID}: R-001
+\item \textbf{Nombre}: Aparece un nuevo tipo de tarjeta de crédito.
+\item \textbf{Descripción}:
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{ID}: R-002
+    \item \textbf{Nombre}: el cajero deja de dar servicio debido a un error de software.
+    \item \textbf{Descripción}: Un error de software provoca que el cajero quede inutilizado. 
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{ID}: R-003
+    \item \textbf{Nombre}: Un competidor crea un producto similar que supera en funcionalidades nuestro producto.
+\end{itemize}
+
+\subsubsection{Planificación de riesgos}
+
+
+\subsection{Pensando en el proceso de pruebas, establece las clases de equivalencia para las siguientes entradas:}
+\begin{itemize}
+    \item Tipo de tarjeta
+    \item PIN
+    \item ¿Desea imprimir el recibo?
+\end{itemize}

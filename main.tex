@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{makeidx}
+\usepackage[pdftex]{graphicx}
+\usepackage[a4paper, margin=2.75cm, bottom=3.25cm, top=2.25cm]{geometry}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{forloop}
+\usepackage{longtable}
+\usepackage{ulem} % Arregla los problemas asociados a underline
+\setlength{\parindent}{0pt}
+\usepackage{footnote}
+\usepackage{pdfpages}
+\usepackage{enumerate}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+% Necesitamos resetear las secciones en cada tema
+\makeatletter 
+\@addtoreset{section}{part}
+\makeatother  
+
+\begin{document}
+\renewcommand\partname{Tema} %Cambio de "parte" por "tema"
+\includepdf{Resources/PORTADA.pdf}
+\blankpage
+% Portada de los apuntes de ENSO
+% RESUMEN DE ENSO
+% AHORA CON MÁS RABO! (mensaje superior derecha)
+% INCLUYE PREGUNTAS DE EXAMEN! (en vertical)
+% EDICIÓN ESPECIAL TABOADA 2016-2017(mensaje inferior izquierda)
+
+\tableofcontents
+\newpage
+\input{tema1.tex}
+\newpage
+\input{tema2.tex}
+\newpage
+\input{tema3.tex}
+\newpage
+\input{tema4.tex}
+\newpage
+\input{tema5.tex}
+\newpage
+\input{tema6.tex}
+\newpage
+
+\part{Preguntas de examen}
+\input{preguntasCortas.tex}
+\newpage
+\input{preguntasLargas.tex}
+\newpage
+\input{casosPractico2014.tex}
+\newpage
+\input{casosPractico2013.tex}
+\newpage
+\includepdf{Resources/CONTRAPORTADA}
+\end{document}
